@@ -1,0 +1,159 @@
+body {
+	margin: 0 auto;
+}
+
+.icono {
+	width: 56px;
+}
+
+a {
+	color:rgb(160, 20, 30);
+	text-decoration: none;
+}
+
+nav ul {
+	list-style-type: none;
+	display: flex;
+	gap: 20px;
+	justify-content: center;
+	padding: 0;
+}
+
+button {
+	color: white;
+	background-color: #7bdb7b;
+	border: none;
+	border-radius: 10px;
+	font-size: 13px;
+	padding: 12px;
+	cursor: pointer;
+}
+
+.contenedor-idioma-logo {
+	display: flex;
+	gap: 20px;
+	align-items: center;
+	justify-content: end; /*se va a la derecha*/
+}
+
+header {
+	padding: 10px;
+	width: 1200px;
+	margin: 10px auto;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+footer {
+	width: 1200px;
+	display: grid;
+	margin: 10px auto;
+	grid-template-columns: 0.5fr 2fr 0.5fr;	
+}
+
+.proposicion-valor {
+	display: flex;
+	height: 150px;
+	background-image: url("../imagenes/sudeste-asiatico.png");
+	background-size: cover;
+	background-position: center center;
+	justify-content: center;
+}
+
+.carrusel {
+	position: relative;
+	display: grid;
+	grid-template-rows: auto auto 1fr;
+	gap: 5px;
+	height: 200px;
+	padding: 10px;
+	background-image: url("../imagenes/grand-place.jpg");
+	background-size: cover;
+	background-position: center center;
+
+}
+
+.boton-izq {
+	position: absolute;
+	top: 50%;
+	left: 10%;
+	background-color: white;
+	color: darkred;
+	border: none;
+	font-size: 23px;
+	padding: 8px 12px;
+}
+
+.boton-der {
+	position: absolute;
+	top: 50%;
+	right: 10%;
+	background-color: white;
+	color: darkred;
+	border: none;
+	font-size: 23px;
+	padding: 8px 12px;
+}
+
+#contenedor-titulo-precio {
+	display: flex;
+	justify-content: space-between;
+}
+
+.carrusel h2,
+.carrusel h3{
+	background-color: white;
+	color: darkred;
+	border: 2px solid darkred;
+	border-radius: 10px;
+	padding: 5px;
+}
+
+#boton-comprar {
+	justify-self: end;
+	align-self: end;
+}
+
+.rejilla-experiencias {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	gap: 10px;
+	
+}
+
+.contenedor-tarjeta-experiencia {
+	border: 1px solid darkred;
+	padding: 5px;	
+}
+
+.contenedor-tarjeta-experiencia h4{
+	margin: 0 0 10px 0;
+}
+
+.cuerpo-tarjeta-experiencia {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	gap: 10px;
+}
+
+aside{
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+input {
+	padding: 8px;
+	font-size: 18px;
+}
+
+.recordar {
+	display: flex;
+	justify-content: center;
+}
+
+.acciones-formulario {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid: 5px;
+	
+}
