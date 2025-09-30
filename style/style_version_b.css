@@ -1,0 +1,665 @@
+body {
+	margin: 0 auto;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.icono {
+	width: 64px;
+	transition: all 0.3s ease;
+}
+
+.icono:hover {
+    transform: scale(1.1);
+}
+
+.flag {
+    width: 32px;
+    height: auto;
+    margin-right: 8px;
+    vertical-align: middle;
+	border-radius: 10%;
+}
+
+
+a {
+	color:rgb(160, 20, 30);
+	text-decoration: none;
+}
+
+/*lista*/
+nav ul {
+	list-style: none; /* elimina los puntos */
+	padding: 0;
+	margin: 0;
+	display: flex;
+	gap: 20px;
+	justify-content: center;
+}
+
+nav a {
+	color: white;
+	text-decoration: none;
+	padding: 8px 15px;
+	border-radius: 8px;
+	transition: all 0.3s ease;
+	font-weight: 500;
+	display: inline-block; /* importante para que padding funcione bien */
+}
+
+nav a:hover {
+	background-color: #6abf8e;
+	color: white;
+	transform: translateY(-2px);
+	box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+button {
+	color: white;
+	background-color: #6abf8e;
+	border: none;
+	border-radius: 10px;
+	font-size: 13px;
+	padding: 12px;
+	cursor: pointer;
+}
+
+.contenedor-idioma-logo {
+	display: flex;
+	gap: 20px;
+	align-items: center;
+	justify-content: end; /*se va a la derecha*/
+}
+
+/* Header de ancho completo */
+header {
+	width: 100%;
+	background-color: darkgreen;
+	color: white;
+	padding: 15px 0; /* espacio arriba y abajo */
+}
+
+header .contenedor-header {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	align-items: center;
+	gap: 20px;
+	padding: 0 20px;
+}
+
+header h1 {
+	font-size: 22px;
+	margin: 0;
+}
+
+main {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	gap: 20px;
+	max-width: 1200px;
+	margin: 20px auto;
+}
+
+.proposicion-valor {
+    display: flex;
+    height: 150px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 5%;
+    background-image: url("../images/proposicion.webp");
+    background-size: cover;
+    background-position: center center;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+.carrusel {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 300px;
+	padding: 20px 60px; /* espacio para las flechas */
+	border-radius: 12px;
+}
+
+.info-carrusel {
+	background: url("../images/grand-place.jpg") center/cover no-repeat;
+	width: 90%;
+	border-radius: 12px;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	gap: 15px;
+	min-height: 300px;
+}
+
+/* pack y precio separados */
+.contenedor-titulo-precio {
+	display: flex;
+	justify-content: space-between;
+}
+
+.pack, h3 {
+	background: rgba(255,255,255,0.9);
+	padding: 8px 12px;
+	border-radius: 8px;
+	font-size: 20px;
+}
+
+.precio {
+	margin-left: auto;
+	background: rgb(254, 246, 0);
+	padding: 8px 12px;
+	border-radius: 8px;
+}
+
+h3 {
+	display: block; 
+    width: 95%;    
+    margin-top: 0px;    
+    color: white;
+    text-shadow: 2px 2px 4px black;
+}
+
+#boton-comprar {
+	position: absolute;
+    bottom: 15px;      
+    right: 15px;       
+    background: #26c6da;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+	font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+#boton-comprar:hover {
+	transform: scale(1.1);
+	background-color: #1ca0c9;
+}
+
+/* flechas */
+.boton-izq, .boton-der {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background: rgba(14, 130, 45, 0.4); /* semitransparente moderno */
+	color: white;
+	border: none;
+	padding: 12px 16px;
+	border-radius: 50%;
+	cursor: pointer;
+	font-size: 20px;
+	font-weight: bold;
+	transition: all 0.3s ease; /* efecto suave */
+	box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* profundidad */
+	z-index: 10;
+}
+
+/* efecto hover */
+.boton-izq:hover, .boton-der:hover {
+	background: rgba(0, 0, 0, 0.7); /* más oscuro al pasar el ratón */
+	transform: translateY(-50%) scale(1.2); /* agranda un poco */
+	box-shadow: 0 6px 12px rgba(0,0,0,0.4); /* sombra más intensa */
+}
+
+.boton-izq { left: 15px; }
+.boton-der { right: 15px; }
+
+.rejilla-experiencias {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 15px;
+	margin-top: 20px;
+}
+
+.contenedor-tarjeta-experiencia {
+	background-color: #fdfdfd;
+    border-radius: 12px;
+    padding: 10px;        
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;   
+    transition: all 0.3s ease;
+}
+
+.contenedor-tarjeta-experiencia:hover {
+	transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.cuerpo-tarjeta-experiencia {
+	position: relative;
+}
+
+.cuerpo-tarjeta-experiencia img {
+	width: 100%;
+	height: auto;
+	border-radius: 8px;
+	display: block;
+}
+
+.contenedor-tarjeta-experiencia:hover img {
+	transform: scale(1.03);  /* ligero zoom al pasar ratón */
+}
+
+.cuerpo-tarjeta-experiencia .like {
+	position: absolute;
+	top: 3%;
+	right: 3%;
+	width: 15%;
+	height: auto;
+	cursor: pointer;
+	z-index: 10;
+	transition: transform 0.3s ease;
+}
+
+.cuerpo-tarjeta-experiencia .like:hover {
+	transform: scale(1.3);
+	content: url('../images/like.png');
+}
+
+.contenedor-tarjeta-experiencia h4 {
+	font-size: 18px;
+    color: darkgreen;
+    margin: 10px 0 5px;
+}
+
+.cuerpo-tarjeta-experiencia p {
+	font-size: 16px;
+    color: #333;
+}
+
+.cuerpo-tarjeta-experiencia button {
+    position: absolute;
+    bottom: 10px; /* mantiene separación desde abajo */
+    right: 10px;  /* mantiene separación desde la derecha */
+    margin-top: 0; /* elimina el margen que causaba que se salga */
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    border: 2px solid darkgreen;
+    border-radius: 10px;
+    background-color: #fafafa;
+    min-width: 280px;
+}
+
+/* Usuario logueado */
+.usuario-logueado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.usuario-logueado .perfil-usuario {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.usuario-logueado .nombre-usuario {
+    font-weight: bold;
+    font-size: 18px;
+    color: darkgreen;
+}
+
+.usuario-logueado .cerrar-sesion {
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 8px;
+    border: none;
+    background-color: #e74c3c;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.usuario-logueado .cerrar-sesion:hover {
+    background-color: #c0392b;
+}
+
+/* Busca experiencias */
+.busca-experiencias {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.busca-experiencias h4 {
+    margin-bottom: 10px;
+    color: darkgreen;
+}
+
+.filtros-experiencias {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.filtros-experiencias label {
+    font-size: 16px;
+    color: #333;
+}
+
+.busqueda-palabras {
+    display: grid;
+    gap: 5px;
+	grid-template-columns: 1fr auto;
+}
+
+.busqueda-palabras input[type="text"] {
+    padding: 6px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    height: auto; /* evita que herede alturas grandes */
+    box-sizing: border-box;
+	height: 32px;
+}
+
+.busqueda-palabras button {
+    padding: 6px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    background-color: #6abf8e;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+	width: 32px;
+    height: 32px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.busqueda-palabras button:hover {
+    background-color: #5aa573;
+}
+
+.busqueda-palabras button img {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    display: block;
+}
+
+/* Últimos consejos */
+.ultimos-consejos {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.ultimos-consejos h4 {
+    margin-bottom: 10px;
+    color: darkgreen;
+}
+
+.ultimos-consejos ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 10px 0;
+}
+
+.ultimos-consejos ul li {
+    margin-bottom: 5px;
+}
+
+.ultimos-consejos ul li a {
+    font-size: 16px;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.ultimos-consejos ul li a:hover {
+    color: darkgreen;
+}
+
+.ultimos-consejos h5 {
+    margin-bottom: 5px;
+    color: darkgreen;
+    font-size: 16px;
+}
+
+.form-nuevo-consejo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-nuevo-consejo input,
+.form-nuevo-consejo textarea {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-nuevo-consejo button {
+    padding: 8px 12px;
+    background-color: #6abf8e;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form-nuevo-consejo button:hover {
+    background-color: #5aa573;
+}
+
+/* Mini calendario */
+.mini-calendario {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    width: 100%;
+	box-sizing: border-box;
+}
+
+.mini-calendario h4 {
+    margin-bottom: 14px;
+    color: darkgreen;
+    text-align: center;
+}
+
+.calendario {
+    display: grid;
+	width: 100%;
+    grid-template-rows: auto 1fr;
+	box-sizing: border-box;
+	gap: 0px;
+}
+
+.dias-semana {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: darkgreen;
+}
+
+.dias {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    gap: 2px;
+}
+
+.dias span {
+    padding: 4px 0;
+    border-radius: 4px;
+}
+
+.dias span.hoy {
+    background-color: darkgreen;
+    color: white;
+    font-weight: bold;
+}
+
+
+footer{
+    max-width: 1200px;
+    margin: 20px auto;
+	margin-bottom: 50px;
+    padding: 10px 0;
+    border-top: 2px solid darkolivegreen;
+    position: relative;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px; /* separación con el newsletter */
+}
+
+footer ul.footer-text li a {
+    color: darkgreen;
+    font-size: 14px;
+}
+
+.newsletter-footer {
+    margin-top: 20px;
+    text-align: center;
+	width: 100%;
+}
+
+.newsletter-footer p {
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: darkgreen;
+}
+
+.newsletter-footer form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap; /*para móviles*/
+}
+
+.newsletter-footer input[type="email"] {
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    min-width: 200px;
+}
+
+.newsletter-footer button {
+    padding: 8px 16px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #6abf8e;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.newsletter-footer button:hover {
+    background-color: #5aa573;
+}
+
+/* Responsive */
+/* Tablet (≤768px) */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr; /* apila contenido principal y aside */
+        gap: 20px;
+    }
+
+    .rejilla-experiencias {
+        grid-template-columns: repeat(2, 1fr); /* de 3 columnas a 2 */
+    }
+
+    header .contenedor-header {
+        grid-template-columns: 1fr; /* logo y nav centrados */
+        text-align: center;
+        gap: 10px;
+    }
+
+    .contenedor-idioma-logo {
+        justify-content: center; /* centra idioma/logo */
+    }
+
+    aside {
+        width: 100%; /* ocupa todo el ancho disponible */
+        min-width: unset; /* quita el mínimo fijo */
+    }
+
+    .busqueda-palabras input[type="text"] {
+        width: 80%; /* ajusta ancho del input */
+    }
+
+    .busqueda-palabras button {
+        width: 32px; /* mantiene botón cuadrado */
+    }
+}
+
+/* Móvil (max-width: 600px)*/
+@media (max-width: 600px) {
+    .rejilla-experiencias {
+        grid-template-columns: 1fr; /* tarjetas en 1 columna */
+    }
+
+    .carrusel {
+        height: auto; /* evita desbordes */
+        padding: 10px 20px;
+    }
+
+    aside {
+        width: 100%; /* ocupa ancho completo */
+        min-width: unset;
+    }
+
+    .busca-experiencias,
+    .ultimos-consejos,
+    .mini-calendario {
+        width: 100%; /* cajas del aside al 100% */
+    }
+
+    .busqueda-palabras input[type="text"] {
+        width: calc(100% - 36px); /* input ocupa todo menos el botón */
+    }
+
+    .busqueda-palabras button {
+        width: 32px; /* mantiene el botón cuadrado */
+    }
+
+    header .contenedor-header h1 {
+        font-size: 18px; /* reduce tamaño del título */
+    }
+}
+

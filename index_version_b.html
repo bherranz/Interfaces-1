@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Operación Mochilera</title>
-	<link rel="stylesheet" type="text/css" href="style/style_main_page.css">
+	<link rel="stylesheet" type="text/css" href="style/style_version_b.css">
 </head>
 <body>
 	<header>
@@ -41,17 +41,17 @@
 
 				<!-- Carrusel de promociones -->
 				<article class="carrusel">
-					<!-- Botones para mover carrusel -->
+					<!-- Botones de dirección -->
 					<button class="boton-izq" >&lt;</button>
 					<button class="boton-der">&gt;</button>
-					<!-- Contenido de la foto -->
+					<!-- Contenido sobre la foto -->
 					<div class="info-carrusel">
 						<div class="contenedor-titulo-precio">
 							<span class="pack">Pack sudeste asiático</span>
 							<span class="precio">600€</span>
 						</div>
 						<h3>Vietnam y Camboya</h3>
-						<!-- Botón de compra que lleva a otra versión -->
+						<!-- Botón compra lleva a otra versión -->
 						<button id="boton-comprar" onclick="window.location.href='index_version_c.html'">Compra</button>
 					</div>
 				</article>
@@ -135,42 +135,75 @@
 			</section>
 		</div>
 
-		<!-- Barra lateral con login y enlaces -->
 		<aside>
-			<input type="text" name="" placeholder="Usuario" />
-			<input type="password" name="" placeholder="Contraseña" />
-			<div class="recordar">
-				<input type="checkbox" id="recordar" name="recordar" />
-				<label for="recordar">Recordar credenciales</label>
-			</div>
-			<div>
-				<!-- Botones de acceso y registro -->
-				<button onclick="window.location.href='index_version_b.html'">Iniciar sesión</button>
-				<button onclick="window.location.href='index_version_a.html'">Registro</button>
+			<!-- Datos del usuario logueado -->
+			<div class="usuario-logueado">
+				<img src="images/perfil.jpg" alt="Foto de perfil" class="perfil-usuario">
+				<p class="nombre-usuario">SaraMountain19</p>
+				<button class="cerrar-sesion" onclick="window.location.href='index_main_page.html'">Cerrar sesión</button>
 			</div>
 
-			<hr>
+			<!-- Filtros de búsqueda de experiencias -->
+			<div class="busca-experiencias">
+				<h4>Busca experiencias</h4>
+				<div class="filtros-experiencias">
+					<label><input type="checkbox" name="continente" value="asia"> Asia</label>
+					<label><input type="checkbox" name="continente" value="oceania"> Oceanía</label>
+					<label><input type="checkbox" name="continente" value="america"> América</label>
+					<label><input type="checkbox" name="continente" value="africa"> África</label>
+				</div>
+				<div class="busqueda-palabras">
+					<input type="text" placeholder="Buscar...">
+					<button class="btn-buscar"><img src="images/lupa.png" alt="Buscar"></button>
+				</div>
+			</div>
 
-			<h4>Top destinos actualmente</h4>
-			<a href="#">
-				<img src="images/vietnam.png" alt="Bandera de Vietnam" class="flag"> Vietnam
-			</a>
-			<a href="#">
-				<img src="images/nueva-zelanda.png" alt="Bandera de Nueva Zelanda" class="flag"> Nueva Zelanda
-			</a>
-			<a href="#">
-				<img src="images/mexico.png" alt="Bandera de México" class="flag"> México
-			</a>
+			<!-- Últimos consejos de la comunidad -->
+			<div class="ultimos-consejos">
+				<h4>Últimos consejos</h4>
+				<ul>
+					<li><a href="#">Hidratación</a></li>
+					<li><a href="#">Medidas de seguridad</a></li>
+					<li><a href="#">Dónde comprar equipo</a></li>
+					<li><a href="#">Comida callejera</a></li>
+				</ul>
 
-			<h4>Consejos rápidos</h4>
-			<a href="...">Documentos esenciales</a>
-			<a href="...">Presupuesto diario</a>
-			<a href="...">Aprende frases locales</a>
+				<!-- Formulario para agregar consejo -->
+				<h5>¿Tienes algún consejo?</h5>
+				<form class="form-nuevo-consejo">
+					<input type="text" placeholder="Título del consejo" required>
+					<textarea placeholder="Descripción del consejo" rows="3" required></textarea>
+					<button type="submit">Enviar</button>
+				</form>
+			</div>
 
-			<h4>Próximos encuentros</h4>
-			<a href="...">Granada - 09/10</a>
-			<a href="...">Bilbao - 20/10</a>
-			<a href="...">Segovia - 04/11</a>
+			<!-- Mini calendario del mes -->
+			<div class="mini-calendario">
+				<h4>Octubre 2025</h4>
+				<div class="calendario">
+					<div class="dias-semana">
+						<span>Lun</span>
+						<span>Mar</span>
+						<span>Mié</span>
+						<span>Jue</span>
+						<span>Vie</span>
+						<span>Sáb</span>
+						<span>Dom</span>
+					</div>
+					<div class="dias">
+						<!-- Se empieza el mes en miércoles -->
+						<span></span><span></span>
+						<span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+						<span>6</span><span class="hoy">7</span>
+						<span>8</span><span>9</span><span>10</span><span>11</span><span>12</span>
+						<span>13</span><span>14</span><span>15</span><span>16</span><span>17</span>
+						<span>18</span><span>19</span><span>20</span><span>21</span><span>22</span>
+						<span>23</span><span>24</span><span>25</span><span>26</span><span>27</span>
+						<span>28</span><span>29</span><span>30</span><span>31</span>
+						<span></span><span></span>
+					</div>
+				</div>
+			</div>
 		</aside>
 	</main>
 
