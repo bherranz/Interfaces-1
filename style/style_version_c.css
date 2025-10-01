@@ -347,21 +347,14 @@ input[type="date"] {
 
 /* Móvil (max-width: 600px)*/
 @media (max-width: 600px) {
-    .rejilla-experiencias {
-        grid-template-columns: 1fr; /* tarjetas en 1 columna */
-    }
 
-    .carrusel {
-        height: auto; /* evita desbordes */
-        padding: 10px 20px;
-    }
 
     main {
         grid-template-columns: 1fr; /* apila contenido principal y aside */
         grid-template-rows: 1fr 1fr;
         gap: 20px;
     }
-
+    
     header .contenedor-header h1 {
         font-size: 18px; /* reduce tamaño del título */
     }
