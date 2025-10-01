@@ -195,6 +195,7 @@ main {
 .formulario-registro div:first-child {
 	grid-column-start: 1;
 	grid-column-end: -1;
+	text-align: center;
 
 }
 
