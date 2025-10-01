@@ -1,0 +1,369 @@
+body {
+	margin: 0 auto;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.icono {
+	width: 64px;
+	transition: all 0.3s ease;
+}
+
+.icono:hover {
+    transform: scale(1.1);
+}
+
+.flag {
+    width: 32px;
+    height: auto;
+    margin-right: 8px;
+    vertical-align: middle;
+	border-radius: 10%;
+}
+
+
+a {
+	color:rgb(160, 20, 30);
+	text-decoration: none;
+}
+
+/*lista*/
+nav ul {
+	list-style: none; /* elimina los puntos */
+	padding: 0;
+	margin: 0;
+	display: flex;
+	gap: 20px;
+	justify-content: center;
+}
+
+nav a {
+	color: white;
+	text-decoration: none;
+	padding: 8px 15px;
+	border-radius: 8px;
+	transition: all 0.3s ease;
+	font-weight: 500;
+	display: inline-block; /* importante para que padding funcione bien */
+}
+
+nav a:hover {
+	background-color: #6abf8e;
+	color: white;
+	transform: translateY(-2px);
+	box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+button {
+	color: white;
+	background-color: #6abf8e;
+	border: none;
+	border-radius: 10px;
+	font-size: 13px;
+	padding: 12px;
+	cursor: pointer;
+}
+
+.contenedor-idioma-logo {
+	display: flex;
+	gap: 20px;
+	align-items: center;
+	justify-content: end; /*se va a la derecha*/
+}
+
+/* Header de ancho completo */
+header {
+	width: 100%;
+	background-color: darkgreen;
+	color: white;
+	padding: 15px 0; /* espacio arriba y abajo */
+}
+
+header .contenedor-header {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	align-items: center;
+	gap: 20px;
+	padding: 0 20px;
+}
+
+header h1 {
+	font-size: 22px;
+	margin: 0;
+}
+
+/* pack y precio separados */
+.contenedor-titulo-precio {
+	display: flex;
+	justify-content: space-between;
+}
+
+.pack, h3 {
+	background: rgba(255,255,255,0.9);
+	padding: 8px 12px;
+	border-radius: 8px;
+	font-size: 20px;
+}
+
+.precio {
+	margin-left: auto;
+	background: rgb(254, 246, 0);
+	padding: 8px 12px;
+	border-radius: 8px;
+}
+
+h3 {
+	display: block; 
+    width: 95%;    
+    margin-top: 0px;    
+    color: white;
+    text-shadow: 2px 2px 4px black;
+}
+
+footer{
+    max-width: 1200px;
+    margin: 20px auto;
+	margin-bottom: 50px;
+    padding: 10px 0;
+    border-top: 2px solid darkolivegreen;
+    position: relative;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px; /* separación con el newsletter */
+}
+
+footer ul.footer-text li a {
+    color: darkgreen;
+    font-size: 14px;
+}
+
+.newsletter-footer {
+    margin-top: 20px;
+    text-align: center;
+	width: 100%;
+}
+
+.newsletter-footer p {
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: darkgreen;
+}
+
+.newsletter-footer form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap; /*para móviles*/
+}
+
+.newsletter-footer input[type="email"] {
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    min-width: 200px;
+}
+
+.newsletter-footer button {
+    padding: 8px 16px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #6abf8e;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.newsletter-footer button:hover {
+    background-color: #5aa573;
+}
+
+main {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+	max-width: 1200px;
+	margin: 20px auto;
+}
+
+/*formulario de compra y organización de las columnas*/
+.formulario-compra {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: repeat(11, 50px);
+	gap: 3px;
+    justify-items: normal;
+	align-items: center;
+	border: 2px solid darkgreen;
+	border-radius: 10px;
+	background-color: #fafafa;
+	padding: 10px;
+
+}
+
+.formulario-compra div:first-child {
+	grid-column-start: 1;
+	grid-column-end: -1;
+	text-align: center;
+
+}
+
+.formulario-compra div:nth-child(2) {
+	grid-column-start: 1;
+	grid-column-end: -1;
+}
+.formulario-compra div:nth-child(3) {
+	grid-column-start: 1;
+	grid-column-end: -1;
+
+}
+.formulario-compra div:nth-child(4) {
+	grid-column-start: 1;
+	grid-column-end: -1;
+
+}
+.formulario-compra div:nth-child(5) {
+	grid-column-start: 1;
+	grid-column-end: -1;
+
+}
+.formulario-compra div:nth-child(6) {
+	grid-column-start: 1;
+	grid-column-end: -1;
+}
+.formulario-compra div:nth-child(7) {
+	grid-column-start: 1;
+	grid-column-end: -1;
+}
+.formulario-compra div:nth-child(8) {
+	grid-column-start: 1;
+	grid-column-end: -1;
+}
+.formulario-compra div:last-child {
+    grid-row-start: -2;
+    grid-row-end: -1;
+    grid-column-start: 1;
+	grid-column-end: -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    gap: 50px;
+
+}
+
+/*forma de los inputs*/
+input {
+	padding: 10px;
+    box-sizing: border-box;
+	font-size: 15px;
+	border: 1px solid #605c5c;
+	border-radius: 3px;
+    width: 400px;
+}
+
+input[type="date"] {
+    width: auto;
+}
+
+#cvv {
+    width: 120px;
+}
+
+/*Descripción de la compra*/
+
+.pack-compra {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 300px;
+	padding: 20px 60px; /* espacio para las flechas */
+	border-radius: 12px;
+}
+
+.info-pack-compra {
+	background: url("../images/grand-place.jpg") center/cover no-repeat;
+	width: 90%;
+	border-radius: 12px;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	gap: 15px;
+	min-height: 300px;
+}
+
+.desc-compra {
+    position: relative;
+    justify-content: center;
+    display: block;
+	height: 300px;
+	gap: 3px;
+    justify-items: normal;
+	align-items: center;
+	border: 2px solid darkgreen;
+	border-radius: 10px;
+	background-color: #fafafa;
+	padding: 10px;
+}
+
+.contenedor-izq {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Responsive */
+/* Tablet (≤768px) */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr; /* apila contenido principal y aside */
+        grid-template-rows: 1fr 1fr;
+        gap: 20px;
+    }
+
+    header .contenedor-header {
+        grid-template-columns: 1fr; /* logo y nav centrados */
+        text-align: center;
+        gap: 10px;
+    }
+
+    .contenedor-idioma-logo {
+        justify-content: center; /* centra idioma/logo */
+    }
+
+    aside {
+        width: 100%; /* ocupa todo el ancho disponible */
+        min-width: unset; /* quita el mínimo fijo */
+    }
+}
+
+/* Móvil (max-width: 600px)*/
+@media (max-width: 600px) {
+    .rejilla-experiencias {
+        grid-template-columns: 1fr; /* tarjetas en 1 columna */
+    }
+
+    .carrusel {
+        height: auto; /* evita desbordes */
+        padding: 10px 20px;
+    }
+
+    main {
+        grid-template-columns: 1fr; /* apila contenido principal y aside */
+        grid-template-rows: 1fr 1fr;
+        gap: 20px;
+    }
+
+    header .contenedor-header h1 {
+        font-size: 18px; /* reduce tamaño del título */
+    }
+}
+
