@@ -2,54 +2,74 @@
 <html>
 <head>
 	<title>Mochileros sin fronteras</title>
-	<link rel="stylesheet" type="text/css" href="estilos/estilo.css">
+	<link rel="stylesheet" type="text/css" href="style/style_version_a.css">
 </head>
-<body class="body-form">
+<body>
 	<header>
-		<h1>Mochileros sin fronteras</h1>
-		<nav>
-			<ul>
-				<li><a href="...">Inicio</a></li>
-				<li><a href="...">Experiencias</a></li>
-			</ul>
-		</nav>
-		<div class="contenedor-idioma-logo">
-			<img src="imagenes\logo.webp" alt="logo" class="icono">
-			<select>
-				<option>Inglés</option>
-				<option>Portugués</option>
-				<option>Castellano</option>
-			</select>
+		<div class="contenedor-header">
+			<h1>Operación Mochilera</h1>
+			<nav>
+				<ul>
+					<li><a href="#">Inicio</a></li>
+					<li><a href="#">Experiencias</a></li>
+					<li><a href="#">Novedades</a></li>
+					<li><a href="#">Consejos</a></li>
+				</ul>
+			</nav>
+			<div class="contenedor-idioma-logo">
+				<img src="images\logo.png" alt="logo" class="icono">
+				<select>
+					<option>Castellano</option>
+					<option>Inglés</option>
+					<option>Catalán</option>
+					<option>Francés</option>
+					<option>Alemán</option>
+				</select>
+			</div>
 		</div>
 	</header>
 
-	<main class="main2">
-		<section class="section2">
+	<main>
+		<section class="formulario-registro">
+			<div><h1>Registro de nuevos usuarios</h1></div>
 			<div><input type="text" placeholder="Nombre"/></div>
 			<div><input type="text" placeholder="Apellidos"/></div>
 			<div><input type="email" placeholder="Correo electrónico"/></div>
 			<div><input type="email" placeholder="Confirmar correo"/></div>
-			<div><label for="fecha">Fecha de nacimiento</label><input type="date" id="fecha" name="fecha"/></div>
-			<div><input type="text" placeholder="Nombre"/></div>
-			<div><input type="password" placeholder="contraseña"/></div>
-			<div><label for="foto">Subir imagen de perfil</label><input type="file" id="foto" name="foto" placeholder="Examinar..."></div>
+			<div><label for="fecha">Fecha de nacimiento</label></div>
+			<div><input type="date" id="fecha" name="fecha"/></div>
+			<div><input type="text" placeholder="Login"/></div>
+			<div><input type="password" placeholder="Password"/></div>
+			<div><label for="foto" id="label-for-foto">Subir imagen de perfil</label></div>
+			<div><input type="file" id="foto" name="foto" placeholder="Examinar..."></div>
 			<div><input type="checkbox" id="politica" name="politica"><label for="politica">Acepto la <a href="">Política de privacidad</a></label></div>
-			<div><button><a href="">Guardar datos y acceder</a></button></div>
+			<div><a href=""><button>Guardar datos y acceder</button></a></div>
 		</section>
 	</main>
 	<footer>
-        <p>2025 Mochileros sin fronteras</p>
-        <nav>
-            <ul>
-                <li><a href="#">Sobre nosotros</a></li>
-                <li><a href="#">Política de privacidad</a></li>
-                <li><a href="#">Ayuda</a></li>
-            </ul>
-        </nav>
-        <div>
-  			<img src="imagenes/facebook.png" class="icono">	
-  			<img src="imagenes/facebook.png" class="icono">									
-        </div>
-    </footer>
+		<div class="footer-grid">
+			<p>© 2025 Operación Mochilera</p>
+			<nav>
+				<ul class="footer-text">
+					<li><a href="#">Sobre nosotros</a></li>
+					<li><a href="#">Política de Cookies</a></li>
+					<li><a href="#">Política de privacidad</a></li>
+					<li><a href="#">Ayuda</a></li>
+				</ul>
+			</nav>
+			<div>
+				<a href="#"><img src="images/instagram.png" class="icono"></a>
+				<a href="#"><img src="images/facebook.png" class="icono"></a>
+				<a href="#"><img src="images/tiktok.png" class="icono"></a>
+			</div>
+		</div>
+		<div class="newsletter-footer">
+			<p>¡Suscríbete a nuestra Newsletter!</p>
+			<form>
+				<input type="email" placeholder="Introduce tu email" required>
+				<button type="submit">Suscribirse</button>
+			</form>
+		</div>
+	</footer>
 </body>
 </html>
