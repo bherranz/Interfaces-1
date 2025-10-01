@@ -2,81 +2,114 @@
 <html>
 <head>
 	<title>Mochileros sin fronteras</title>
-	<link rel="stylesheet" type="text/css" href="estilos/estilo.css">
+	<link rel="stylesheet" type="text/css" href="style/style_version_c.css">
 </head>
 <body>
 	<header>
-		<h1>Mochileros sin fronteras</h1>
-		<nav>
-			<ul>
-				<li><a href="...">Inicio</a></li>
-				<li><a href="...">Experiencias</a></li>
-			</ul>
-		</nav>
-		<div class="contenedor-idioma-logo">
-			<img src="imagenes\logo.webp" alt="logo" class="icono">
-			<select>
-				<option>Inglés</option>
-				<option>Portugués</option>
-				<option>Castellano</option>
-			</select>
+		<div class="contenedor-header">
+			<h1>Operación Mochilera</h1>
+			<nav>
+				<ul>
+					<li><a href="#">Inicio</a></li>
+					<li><a href="#">Experiencias</a></li>
+					<li><a href="#">Novedades</a></li>
+					<li><a href="#">Consejos</a></li>
+				</ul>
+			</nav>
+			<div class="contenedor-idioma-logo">
+				<img src="images\logo.png" alt="logo" class="icono">
+				<select>
+					<option>Castellano</option>
+					<option>Inglés</option>
+					<option>Catalán</option>
+					<option>Francés</option>
+					<option>Alemán</option>
+				</select>
+			</div>
 		</div>
 	</header>
 
 	<main>
-		<div>
-			<section>
-				
-				<article class="carrusel">
+		<div class="contenedor-izq">
+			<section class="pack-compra">
+				<!-- Contenido de la foto -->
+				<div class="info-pack-compra">
 					<div class="contenedor-titulo-precio">
-						<h2>Pack sudeste asiático</h2>
-						<h2>600€</h2>
+						<span class="pack">Pack sudeste asiático</span>
+						<span class="precio">600€</span>
 					</div>
-					<h3>Vietnam y ca...</h3>
-				</article>
+					<h3>Vietnam y Camboya</h3>
+				</div>
 			</section>
-			<section>
+			<section class="desc-compra">
+				<!--Descripción del producto-->
 				<h4>
 					Descripción del producto
 				</h4>
 				<p>
-					aaaaaaaaaa
+					Disfruta de un maravilloso viaje por el sedeste asiático donde disfrutarás de tu paso por exóticos paises como Vietnam y Camboya.</p>
+				<p>	
+					Con este pack podrás realizar un conjunto de actividades por esos increibles lugares: visitas a templos, visitas a paisajes naturales abiertos, comidas en restaurantes locales acojedores y muchas más...
+				</p>
+				<p>
+					Este paquete incluye alojamiento, actividades y viajes.
+				</p>
+				<p>
+					Duración: 6 noches.    2 adultos
 				</p>
 			</section>
 		</div>
 
-		<aside>
-			<fieldset>
-				<input type="text" placeholder="Nombre completo"/>
-				<input type="email" placeholder="Correo completo"/>
-				<label for="tarjeta">Tipo de tarjeta</label>
+		<aside class="formulario-compra">
+			<!--Secciones del formulario-->
+			<div><h1>Formulario de compra</h1></div>
+			<div><input type="text" placeholder="Nombre completo"/></div>	
+			<div><input type="email" placeholder="Correo completo"/></div>	
+			<div><label for="tarjeta">Tipo de tarjeta</label></div>	
+			<div>	
 				<select id="tarjeta" name="tarjeta">
 					<option>Visa</option>
 					<option>Mastercard</option>
 				</select>
-				<input type="text" placeholder="Número de tarjeta"/>
-				<input type="text" placeholder="Nombre del titular de la tarjeta"/>
-				<label for="fecfac">Fecha de caducidad</label>
+			</div>
+			<div><input type="text" placeholder="Número de tarjeta"/></div>	
+			<div><input type="text" placeholder="Nombre del titular de la tarjeta"/></div>	
+			<div><label for="fecfac">Fecha de caducidad</label></div>	
+			<div>
 				<input type="date" id="fechac" name="fechac"/>
-				<input type="number" placeholder="Código CVV"/>
-				<button type="submit">Comprar</button>
+			</div>	
+			<div>
+				<input id="cvv" type="number" placeholder="Código CVV"/></div>	
+			<div>
+				<button>Comprar</button>
 				<button type="button">Borrar</button>
-			</fieldset>
+			</div>	
 		</aside>
 	</main>
 	<footer>
-        <p>2025 Mochileros sin fronteras</p>
-        <nav>
-            <ul>
-                <li><a href="#">Sobre nosotros</a></li>
-                <li><a href="#">Política de privacidad</a></li>
-                <li><a href="#">Ayuda</a></li>
-            </ul>
-        </nav>
-        <div>
-  			<img src="imagenes/facebook.png" class="icono">	
-  			<img src="imagenes/facebook.png" class="icono">									
-        </div>
-    </footer>
+		<div class="footer-grid">
+			<p>© 2025 Operación Mochilera</p>
+			<nav>
+				<ul class="footer-text">
+					<li><a href="#">Sobre nosotros</a></li>
+					<li><a href="#">Política de Cookies</a></li>
+					<li><a href="#">Política de privacidad</a></li>
+					<li><a href="#">Ayuda</a></li>
+				</ul>
+			</nav>
+			<div>
+				<a href="#"><img src="images/instagram.png" class="icono"></a>
+				<a href="#"><img src="images/facebook.png" class="icono"></a>
+				<a href="#"><img src="images/tiktok.png" class="icono"></a>
+			</div>
+		</div>
+		<div class="newsletter-footer">
+			<p>¡Suscríbete a nuestra Newsletter!</p>
+			<form>
+				<input type="email" placeholder="Introduce tu email" required>
+				<button type="submit">Suscribirse</button>
+			</form>
+		</div>
+	</footer>
 </body>
 </html>
