@@ -5,7 +5,7 @@
 	<title>Operación Mochilera</title>
 	<link rel="stylesheet" type="text/css" href="style/style_version_b.css">
 </head>
-<body>
+<body onload="validaSesion()">
 	<header>
 		<div class="contenedor-header">
 			<h1>Operación Mochilera</h1>
@@ -41,19 +41,19 @@
 				</article>
 
 				<!-- Carrusel de promociones -->
-				<article class="carrusel">
-					<!-- Botones de dirección -->
-					<button class="boton-izq" >&lt;</button>
-					<button class="boton-der">&gt;</button>
-					<!-- Contenido sobre la foto -->
-					<div class="info-carrusel">
+				<article class="carrusel" id="carrusel-home">
+					<!-- Botones para mover carrusel -->
+					<button class="boton-izq" id="carrusel-izq">&lt;</button>
+					<button class="boton-der" id="carrusel-der">&gt;</button>
+					<!-- Contenido de la foto -->
+					<div class="info-carrusel" id="carrusel-info-bg">
 						<div class="contenedor-titulo-precio">
-							<span class="pack">Pack sudeste asiático</span>
-							<span class="precio">699€</span>
+							<span class="pack" id="carrusel-pack">Pack sudeste asiático</span>
+							<span class="precio" id="carrusel-precio">699€</span>
 						</div>
-						<h3>Malaysia y Tailandia</h3>
-						<!-- Botón compra lleva a otra versión -->
-						<button id="boton-comprar" onclick="window.location.href='index_version_c.html'">Compra</button>
+						<h3 id="carrusel-desc">Malaysia y Tailandia</h3>
+						<!-- Botón de compra que lleva a otra versión -->
+						<button id="carrusel-comprar" onclick="window.location.href='index_version_c.html'">Compra</button>
 					</div>
 				</article>
 			</div>
@@ -68,10 +68,10 @@
 						<div class="cuerpo-tarjeta-experiencia">
 							<img src="images/islas-gili.jpg" alt="exp">
 							<!-- Icono Like que lleva a registro -->
-							<img src="images/empty-like.png" class="like" onclick="window.location.href='index_version_a.html'" alt="like">
+							<img src="images/empty-like.png" class="like" alt="like">
 							<div>
 								<!-- Botón Ver más que lleva a registro -->
-								<button onclick="window.location.href='index_version_a.html'">Ver más</button>
+								<button>Ver más</button>
 							</div>
 						</div>
 					</div>
@@ -81,9 +81,9 @@
 						<h4>Camino de Santiago</h4>
 						<div class="cuerpo-tarjeta-experiencia">
 							<img src="images/camino-santiago.png" alt="exp">
-							<img src="images/empty-like.png" class="like" onclick="window.location.href='index_version_a.html'" alt="like">
+							<img src="images/empty-like.png" class="like" alt="like">
 							<div>
-								<button onclick="window.location.href='index_version_a.html'">Ver más</button>
+								<button>Ver más</button>
 							</div>
 						</div>
 					</div>
@@ -92,9 +92,9 @@
 						<h4>Expedición en el Sahara</h4>
 						<div class="cuerpo-tarjeta-experiencia">
 							<img src="images/sahara.jpg" alt="exp">
-							<img src="images/empty-like.png" class="like" onclick="window.location.href='index_version_a.html'" alt="like">
+							<img src="images/empty-like.png" class="like" alt="like">
 							<div>
-								<button onclick="window.location.href='index_version_a.html'">Ver más</button>
+								<button>Ver más</button>
 							</div>
 						</div>
 					</div>
@@ -103,9 +103,9 @@
 						<h4>Montaña multicolor</h4>
 						<div class="cuerpo-tarjeta-experiencia">
 							<img src="images/montaña.jpg" alt="exp">
-							<img src="images/empty-like.png" class="like" onclick="window.location.href='index_version_a.html'" alt="like">
+							<img src="images/empty-like.png" class="like" alt="like">
 							<div>
-								<button onclick="window.location.href='index_version_a.html'">Ver más</button>
+								<button>Ver más</button>
 							</div>
 						</div>
 					</div>
@@ -114,9 +114,9 @@
 						<h4>Templos de Bangkok</h4>
 						<div class="cuerpo-tarjeta-experiencia">
 							<img src="images/bangkok.jpg" alt="exp">
-							<img src="images/empty-like.png" class="like" onclick="window.location.href='index_version_a.html'" alt="like">
+							<img src="images/empty-like.png" class="like" alt="like">
 							<div>
-								<button onclick="window.location.href='index_version_a.html'">Ver más</button>
+								<button>Ver más</button>
 							</div>
 						</div>
 					</div>
@@ -125,9 +125,9 @@
 						<h4>Aventura amazónica</h4>
 						<div class="cuerpo-tarjeta-experiencia">
 							<img src="images/amazonas.jpg" alt="exp">
-							<img src="images/empty-like.png" class="like" onclick="window.location.href='index_version_a.html'" alt="like">
+							<img src="images/empty-like.png" class="like" alt="like">
 							<div>
-								<button onclick="window.location.href='index_version_a.html'">Ver más</button>
+								<button>Ver más</button>
 							</div>
 						</div>
 					</div>
@@ -139,9 +139,9 @@
 		<aside>
 			<!-- Datos del usuario logueado -->
 			<div class="usuario-logueado">
-				<img src="images/perfil.jpg" alt="Foto de perfil" class="perfil-usuario">
-				<p class="nombre-usuario">SaraMountain19</p>
-				<button class="cerrar-sesion" onclick="window.location.href='index_main_page.html'">Cerrar sesión</button>
+				<img src="images/perfil.jpg" alt="Foto de perfil" class="perfil-usuario" id="user_img_display">
+				<p class="nombre-usuario" id="user_name_display">Cargando...</p>
+				<button type="button" class="cerrar-sesion" id="btn_logout">Cerrar sesión</button>
 			</div>
 
 			<!-- Filtros de búsqueda de experiencias -->
@@ -162,19 +162,13 @@
 			<!-- Últimos consejos de la comunidad -->
 			<div class="ultimos-consejos">
 				<h4>Últimos consejos</h4>
-				<ul>
-					<li><a href="#">Hidratación</a></li>
-					<li><a href="#">Medidas de seguridad</a></li>
-					<li><a href="#">Dónde comprar equipo</a></li>
-					<li><a href="#">Comida callejera</a></li>
-				</ul>
-
+				<ul id="lista-consejos"></ul>
 				<!-- Formulario para agregar consejo -->
 				<h5>¿Tienes algún consejo?</h5>
 				<form class="form-nuevo-consejo">
-					<input type="text" placeholder="Título del consejo" required>
-					<textarea placeholder="Descripción del consejo" rows="3" required></textarea>
-					<button type="submit">Enviar</button>
+					<input type="text" placeholder="Título del consejo" required id="consejo-titulo">
+					<textarea placeholder="Descripción del consejo" rows="3" required id="consejo-desc"></textarea>
+					<button type="button" id="btn-enviar-consejo">Enviar</button>
 				</form>
 			</div>
 
@@ -233,5 +227,10 @@
 			</form>
 		</div>
 	</footer>
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script src="script/session.js"></script>
+	<script src="script/carrusel.js"></script>
+	<script src="script/consejos.js"></script>
+	<script src="script/main.js"></script>
 </body>
 </html>

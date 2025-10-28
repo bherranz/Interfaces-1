@@ -41,19 +41,19 @@
 				</article>
 
 				<!-- Carrusel de promociones -->
-				<article class="carrusel">
+				<article class="carrusel" id="carrusel-home">
 					<!-- Botones para mover carrusel -->
-					<button class="boton-izq" >&lt;</button>
-					<button class="boton-der">&gt;</button>
+					<button class="boton-izq" id="carrusel-izq">&lt;</button>
+					<button class="boton-der" id="carrusel-der">&gt;</button>
 					<!-- Contenido de la foto -->
-					<div class="info-carrusel">
+					<div class="info-carrusel" id="carrusel-info-bg">
 						<div class="contenedor-titulo-precio">
-							<span class="pack">Pack sudeste asiático</span>
-							<span class="precio">699€</span>
+							<span class="pack" id="carrusel-pack">Pack sudeste asiático</span>
+							<span class="precio" id="carrusel-precio">699€</span>
 						</div>
-						<h3>Malaysia y Tailandia</h3>
+						<h3 id="carrusel-desc">Malaysia y Tailandia</h3>
 						<!-- Botón de compra que lleva a otra versión -->
-						<button id="boton-comprar" onclick="window.location.href='index_version_c.html'">Compra</button>
+						<button id="carrusel-comprar" onclick="window.location.href='index_version_c.html'">Compra</button>
 					</div>
 				</article>
 			</div>
@@ -138,16 +138,16 @@
 
 		<!-- Barra lateral con login y enlaces -->
 		<aside>
-			<input type="text" name="usuario" placeholder="Usuario" />
-			<input type="password" name="contraseña" placeholder="Contraseña" />
+			<input type="text" name="usuario" placeholder="Usuario" id="login_user" />
+			<input type="password" name="contraseña" placeholder="Contraseña" id="login_pass"/>
 			<div class="recordar">
 				<input type="checkbox" id="recordar" name="recordar" />
 				<label for="recordar">Recordar credenciales</label>
 			</div>
 			<div>
 				<!-- Botones de acceso y registro -->
-				<button onclick="window.location.href='index_version_b.html'">Iniciar sesión</button>
-				<button onclick="window.location.href='index_version_a.html'">Registro</button>
+				<button type="button" id="btn_login">Iniciar sesión</button>
+				<button type="button" id="btn_registro">Registro</button>
 			</div>
 
 			<hr>
@@ -200,5 +200,9 @@
 			</form>
 		</div>
 	</footer>
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script src="script/session.js"></script>
+	<script src="script/carrusel.js"></script>
+	<script src="script/main.js"></script>
 </body>
 </html>

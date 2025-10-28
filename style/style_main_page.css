@@ -135,7 +135,10 @@ main {
 }
 
 .info-carrusel {
-	background: url("../images/grand-place.jpg") center/cover no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	transition: background-image 0.5s ease-in-out;
 	width: 90%;
 	border-radius: 12px;
 	padding: 20px;
@@ -174,7 +177,7 @@ h3 {
 }
 
 /* Botón de compra */
-#boton-comprar {
+#carrusel-comprar {
 	position: absolute;
 	bottom: 15px;
 	right: 15px;
@@ -188,7 +191,7 @@ h3 {
 	transition: all 0.3s ease;
 }
 
-#boton-comprar:hover {
+#carrusel-comprar:hover {
 	transform: scale(1.1);
 	background-color: #1ca0c9;
 }
