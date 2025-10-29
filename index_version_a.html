@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Operación Mochilera</title>
 	<link rel="stylesheet" type="text/css" href="style/style_version_a.css">
+	<script type="text/javascript" src="script/scripc_registro.js"></script>
 </head>
 <body>
 	<header>
@@ -32,19 +33,20 @@
 
 	<main>
 		<section class="formulario-registro">
+			
 			<div><h4>Registro de nuevos usuarios</h4></div>
-			<div><input type="text" placeholder="Nombre"/></div>
-			<div><input type="text" placeholder="Apellidos"/></div>
-			<div><input type="email" placeholder="Correo electrónico"/></div>
-			<div><input type="email" placeholder="Confirmar correo"/></div>
+			<div><input type="text" placeholder="Nombre" id="Nombre"/></div>
+			<div><input type="text" placeholder="Apellidos" id="Apellidos"/></div>
+			<div><input type="email" placeholder="Correo electrónico" id="Correo"/></div>
+			<div><input type="email" placeholder="Confirmar correo" id="Confirmar_correo"/></div>
 			<div><label for="fecha">Fecha de nacimiento</label></div>
 			<div><input type="date" id="fecha" name="fecha"/></div>
-			<div><input type="text" placeholder="Login"/></div>
-			<div><input type="password" placeholder="Password"/></div>
+			<div><input type="text" placeholder="Login" id="login_user"/></div>
+			<div><input type="password" placeholder="Password" id="login_pass"/></div>
 			<div><label for="foto" id="label-for-foto">Subir imagen de perfil</label></div>
 			<div><input type="file" id="foto" name="foto" ></div>
 			<div><input type="checkbox" id="politica" name="politica"><label for="politica">Acepto la <a href="">Política de privacidad</a></label></div>
-			<div><button onclick="window.location.href='index_version_b.html'">Guardar datos y acceder</button></div>
+			<div><button onclick="registrar()">Guardar datos y acceder</button></div>
 		</section>
 	</main>
 	<footer>
