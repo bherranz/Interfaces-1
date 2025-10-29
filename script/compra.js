@@ -87,7 +87,7 @@ function info_pack ()
 	]
 	const idurl = new URLSearchParams(window.location.search);
 	let id = idurl.get("pack");
-	let pack_actual = info_packs[id];
+	let pack_actual = info_packs.find(pack => pack.id === id);
 	//console.log(id);
 	//console.log(pack_actual);
 	//console.log(pack_actual.imagen);
@@ -99,6 +99,6 @@ function info_pack ()
 	document.getElementById('titulo').innerHTML = pack_actual.titulo;
     document.getElementById('precio').innerHTML = pack_actual.precio;
     document.getElementById('descripcion').innerHTML = pack_actual.descripcion;
-	document.getElementById('info_compra').style.backgroundImage = "url(" + pack_actual.imagen + ")";
+	document.getElementById('info-pack-compra').style.backgroundImage = "url(" + pack_actual.imagen + ")";
 
 }

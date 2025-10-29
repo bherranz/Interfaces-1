@@ -6,6 +6,14 @@ function registrar() {
 	    if (usuarios == null) {
 	    	usuarios = [];		
 	    } 
+		// path profile pic
+		let fakepath = document.getElementById('foto').value;
+		// Limpiar el path dejar solo el nombre
+		let nombreArchivo = fakepath.split('\\').pop().split('/').pop();
+
+		// Calcular fecha límite
+		let hoy = new Date();
+		let fechaLimite = new Date(hoy.getFullYear() - 15, hoy.getMonth(), hoy.getDate());
         
 	    // recuperar datos de registro de usuario y crear objeto a insertar en estructura de usuarios	
 	    let usuario = {
@@ -14,9 +22,9 @@ function registrar() {
             correo: document.getElementById('Correo').value,
             conf_correo: document.getElementById('Confirmar_correo').value,
             fecha_nac: document.getElementById('fecha').value,
-            img_perfil: document.getElementById('foto').value,
-		    login_user: document.getElementById('login_user').value,
-		    login_pass: document.getElementById('login_pass').value	
+			img_perfil: "images/" + nombreArchivo,
+		    login: document.getElementById('login_user').value,
+		    password: document.getElementById('login_pass').value	
 	    };
 		
 		const patron_apellido = /^[A-Z]{1}[a-z]{2,}[ ]{1,}[A-Z]{1}[a-z]{2,}/;
@@ -39,7 +47,7 @@ function registrar() {
     	}
 		else if (usuario.apellidos.match(patron_apellido) == null)
     	{
-			window.alert("Apellidos incorrectos. Deben compuesto por mínimo dos cadenas de caracteres de 3 caracteres de longitud cada una.");
+			window.alert("Apellidos incorrectos. Deben compuesto por mínimo dos cadenas de caracteres de 3 caracteres de longitud cada una y que cada cadena empiece por una letra mayúscula.");
     	}
 		else if (usuario.correo.match(patron_correo) == null)
     	{
@@ -53,17 +61,17 @@ function registrar() {
     	{
 			window.alert("Fecha inválida.");
     	}
-		else if (new Date(usuario.fecha_nac) > new Date("2010-7-11"))
-    	{
-			window.alert("Fecha inválida.");
-    	}
-		else if (usuario.login_user.length < 5)
+		else if (new Date(usuario.fecha_nac) >= fechaLimite)
+		{
+			window.alert("Fecha inválida. Debes de tener más de 15 años");
+		}
+		else if (usuario.login.length < 5)
     	{
 			window.alert("Login inválido. La longitud no debe ser menor a 5 caracteres.");
     	}
-		else if ((usuario.login_pass.match(patron_password) == null)&&(usuario.login_pass.length != 8))
+		else if ((usuario.password.match(patron_password) == null)&&(usuario.password.length != 8))
     	{
-			window.alert("Contraseña inválida. La contraseña debe 8 caracteres de longitud, con mínimo 2 números, 1 carácter especial, 1 letra mayúscula y 1 letra minúscula.");
+			window.alert("Contraseña inválida. La contraseña debe exactamente 8 caracteres de longitud, con mínimo 2 números, 1 carácter especial, 1 letra mayúscula y 1 letra minúscula.");
     	}
 		else if (usuario.img_perfil.match(formato_foto) == null)
     	{
