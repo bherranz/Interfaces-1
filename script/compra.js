@@ -81,9 +81,9 @@ function info_pack ()
 {
 	const info_packs = 
 	[
-		{id:"1", titulo:"Pack Sudeste Asiático", precio:"699€", descripcion:"Malaysia y Tailandia", imagen:"images/grand-place.jpg"}, 
-		{id:"2", titulo:"Pack Aventura Andina", precio:"850€", descripcion:"Perú y Bolivia", imagen:"images/salar.png"}, 
-		{id:"3", titulo:"Ruta de los Templos", precio:"720€", descripcion:"Japón y China", imagen:"images/japon.jpg"}
+		{id:"1", titulo:"Pack Sudeste Asiático", precio:"699€", descripcion:"Malaysia y Tailandia", imagen:"images/grand-place.jpg", desc_pack:"Con este pack podrás visitar el sudeste asiático y realizar actividades como visitar paisajes sorprendentes, comer en restaurantes locales, y aprender de las costumbres de estos países."}, 
+		{id:"2", titulo:"Pack Aventura Andina", precio:"850€", descripcion:"Perú y Bolivia", imagen:"images/salar.png", desc_pack:"Con este pack podras disfrutar de un agradable viaje por dos países del sur de América que se juntan para ofrecer unos maravillosos paisajes por los escarpados Andes. Conoce a lugareños y sumérgete en su cultura y sus tradiciones. Haz rutas, prueba la comida local, escala, o haz muchas otras cosas con este pack."}, 
+		{id:"3", titulo:"Ruta de los Templos", precio:"720€", descripcion:"Japón y China", imagen:"images/japon.jpg", desc_pack:"Con este pack puedes descubrir una parte importante de la cultura china y japonesa, visitando templos de las épocas feudales y aprende de sus costumbres y sus tradiciones. Podrás conocer más de como eran las conocidas ciudades de cada país en sus antiguas etapas y disfrutar de actividades que te sumergirán en esos ambientes."}
 	]
 	const idurl = new URLSearchParams(window.location.search);
 	let id = idurl.get("pack");
@@ -97,6 +97,7 @@ function info_pack ()
 
 	
 	document.getElementById('titulo').innerHTML = pack_actual.titulo;
+	document.getElementById('desc-pack').innerHTML = pack_actual.desc_pack;
     document.getElementById('precio').innerHTML = pack_actual.precio;
     document.getElementById('descripcion').innerHTML = pack_actual.descripcion;
 	document.getElementById('info-pack-compra').style.backgroundImage = "url(" + pack_actual.imagen + ")";
