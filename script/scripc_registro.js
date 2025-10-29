@@ -15,8 +15,8 @@ function registrar() {
             conf_correo: document.getElementById('Confirmar_correo').value,
             fecha_nac: document.getElementById('fecha').value,
             img_perfil: document.getElementById('foto').value,
-		    login: document.getElementById('Login').value,
-		    password: document.getElementById('Password').value	
+		    login_user: document.getElementById('login_user').value,
+		    login_pass: document.getElementById('login_pass').value	
 	    };
 		
 		const patron_apellido = /^[A-Z]{1}[a-z]{2,}[ ]{1,}[A-Z]{1}[a-z]{2,}/;
@@ -49,15 +49,19 @@ function registrar() {
     	{
 			window.alert("El correo electrónico de confirmación debe ser igual al correo electrónico.");
     	}
+		else if (!usuario.fecha_nac)
+    	{
+			window.alert("Fecha inválida.");
+    	}
 		else if (new Date(usuario.fecha_nac) > new Date("2010-7-11"))
     	{
 			window.alert("Fecha inválida.");
     	}
-		else if (usuario.login.length < 5)
+		else if (usuario.login_user.length < 5)
     	{
 			window.alert("Login inválido. La longitud no debe ser menor a 5 caracteres.");
     	}
-		else if ((usuario.password.match(patron_password) == null)&&(usuario.password.length != 8))
+		else if ((usuario.login_pass.match(patron_password) == null)&&(usuario.login_pass.length != 8))
     	{
 			window.alert("Contraseña inválida. La contraseña debe 8 caracteres de longitud, con mínimo 2 números, 1 carácter especial, 1 letra mayúscula y 1 letra minúscula.");
     	}
@@ -70,6 +74,15 @@ function registrar() {
 			// almacenar objeto
 	    	usuarios.push(usuario);
 	    	localStorage.setItem("usuarios", JSON.stringify(usuarios));
+
+			// Guardar true en el login mientras la pestaña esté abierta
+            sessionStorage.setItem("login valido", "true"); 
+    
+            // Guardar el usuario para usarlo en la Versión B
+            sessionStorage.setItem("currentUser", JSON.stringify(usuario));
+            
+            // Redirigir a Versión B
+            window.location.href = "index_version_b.html";  
 
 	    	// validar sesión y derivar a página privada
 	    	sessionStorage.setItem("login valido", true);
