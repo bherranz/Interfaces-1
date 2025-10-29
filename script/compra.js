@@ -44,6 +44,10 @@ function comprar() {
     	{
 			window.alert("Nombre del titular de la tarjeta inválido. La longitud no debe ser menor a 3 caracteres.");
     	}
+		else if (!compra.fecha)
+    	{
+			window.alert("Fecha de caducidad inválida.");
+    	}
 		else if ((new Date(compra.fecha) < new Date()))
     	{
 			window.alert("Fecha de caducidad inválida.");
@@ -71,4 +75,30 @@ function borrar()
     document.getElementById('titular_tarjeta').value = "";
     document.getElementById('fechac').value = "";
     document.getElementById('cvv').value = "";
+}
+
+function info_pack ()
+{
+	const info_packs = 
+	[
+		{id:"1", titulo:"Pack Sudeste Asiático", precio:"699€", descripcion:"Malaysia y Tailandia", imagen:"images/grand-place.jpg"}, 
+		{id:"2", titulo:"Pack Aventura Andina", precio:"850€", descripcion:"Perú y Bolivia", imagen:"images/salar.png"}, 
+		{id:"3", titulo:"Ruta de los Templos", precio:"720€", descripcion:"Japón y China", imagen:"images/japon.jpg"}
+	]
+	const idurl = new URLSearchParams(window.location.search);
+	let id = idurl.get("pack");
+	let pack_actual = info_packs[id];
+	//console.log(id);
+	//console.log(pack_actual);
+	//console.log(pack_actual.imagen);
+	//console.log(document.getElementById('info_compra').style.backgroundImage);
+
+
+
+	
+	document.getElementById('titulo').innerHTML = pack_actual.titulo;
+    document.getElementById('precio').innerHTML = pack_actual.precio;
+    document.getElementById('descripcion').innerHTML = pack_actual.descripcion;
+	document.getElementById('info_compra').style.backgroundImage = "url(" + pack_actual.imagen + ")";
+
 }
