@@ -4,8 +4,10 @@
 	<meta charset="UTF-8">
 	<title>Operación Mochilera</title>
 	<link rel="stylesheet" type="text/css" href="style/style_version_c.css">
+	<script type="text/javascript" src="script/compra.js"></script>
+
 </head>
-<body>
+<body onload="info_pack()">
 	<header>
 		<div class="contenedor-header">
 			<h1>Operación Mochilera</h1>
@@ -34,12 +36,12 @@
 		<div class="contenedor-izq">
 			<section class="pack-compra">
 				<!-- Contenido de la foto -->
-				<div class="info-pack-compra">
+				<div class="info-pack-compra" id="info-pack-compra">
 					<div class="contenedor-titulo-precio">
-						<span class="pack">Pack sudeste asiático</span>
-						<span class="precio">699€</span>
+						<span class="pack" id="titulo">Pack sudeste asiático</span>
+						<span class="precio" id="precio">699€</span>
 					</div>
-					<h3>Malaysia y Tailandia</h3>
+					<h3 id="descripcion">Malaysia y Tailandia</h3>
 				</div>
 			</section>
 			<section class="desc-compra">
@@ -48,9 +50,9 @@
 					Descripción del producto
 				</h4>
 				<p>
-					Disfruta de un maravilloso viaje por el sudeste asiático donde disfrutarás de tu paso por exóticos paises como Malaysia y Tailandia.</p>
+					Disfruta de un maravilloso viaje donde conoceras nuevas culturas y territorios.</p>
 				<p>	
-					Con este pack podrás realizar un conjunto de actividades por esos increíbles lugares: visitas a templos, visitas a paisajes naturales abiertos, comidas en restaurantes locales acojedores y muchas más...
+					Con este pack podrás realizar un conjunto de actividades por esos increíbles lugares: visitas a lugares increíbles, visitas a paisajes naturales abiertos, comidas en restaurantes locales acojedores y muchas más...
 				</p>
 				<p>
 					Este paquete incluye alojamiento, actividades y viajes.
@@ -63,29 +65,31 @@
 
 		<aside class="formulario-compra">
 			<!--Secciones del formulario-->
-			<div><h4>Formulario de compra</h4></div>
-			<div><input type="text" placeholder="Nombre completo"/></div>	
-			<div><input type="email" placeholder="Correo completo"/></div>	
-			<div><label for="tarjeta">Tipo de tarjeta</label></div>	
-			<div>	
-				<select id="tarjeta" name="tarjeta">
-					<option>Visa</option>
-					<option>Mastercard</option>
-				</select>
-			</div>
-			<div><input type="text" placeholder="Número de tarjeta"/></div>	
-			<div><input type="text" placeholder="Nombre del titular de la tarjeta"/></div>	
-			<div><label for="fechac">Fecha de caducidad</label></div>	
-			<div>
-				<input type="date" id="fechac" name="fechac"/>
-			</div>	
-			<div>
-				<input id="cvv" type="number" placeholder="Código CVV"/></div>	
-			<div>
-				<button>Comprar</button>
-				<button type="button">Borrar</button>
-			</div>	
-		</aside>
+				<div><h4>Formulario de compra</h4></div>
+				<div><input type="text" placeholder="Nombre completo" id="nombre"/></div>	
+				<div><input type="email" placeholder="Correo completo" id="correo"/></div>	
+				<div><label for="tarjeta">Tipo de tarjeta</label></div>	
+				<div>	
+					<select name="tarjeta" id="tarjeta">
+						<option id="vacio">Seleccione tarjeta</option>
+						<option>Visa</option>
+						<option>Mastercard</option>
+						<option>American Express</option>
+					</select>
+				</div>
+				<div><input type="text" placeholder="Número de tarjeta" id="ntarjeta"/></div>	
+				<div><input type="text" placeholder="Nombre del titular de la tarjeta" id="titular_tarjeta"/></div>	
+				<div><label for="fechac">Fecha de caducidad</label></div>	
+				<div>
+					<input type="date" id="fechac" name="fechac"/>
+				</div>	
+				<div>
+					<input id="cvv" type="text" min="000" max="999" placeholder="Código CVV" id="cvv"/></div>	
+				<div>
+					<button type="button" onclick="comprar()">Comprar</button>
+					<button type="button" onclick="borrar()">Borrar</button>
+				</div>	
+			</aside>
 	</main>
 	<footer>
 		<div class="footer-grid">
